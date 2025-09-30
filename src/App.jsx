@@ -1,5 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import Header from "./components/Header";
+import Note_Warning from "./components/Note_Warning";
 import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -26,6 +27,7 @@ const AppLayout = () => {
       <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
         <div className="App">
           <Header />
+          <Note_Warning/>
           <Outlet />
         </div>
       </UserContext.Provider>

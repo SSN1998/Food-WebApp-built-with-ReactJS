@@ -1,3 +1,7 @@
+export const FETCH_RESTAURANTS_URL =
+  "https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=18.5204303&lng=73.8567437&carousel=true&third_party_vendor=1";
+
+
 export const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
