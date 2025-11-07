@@ -1,6 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import Header from "./components/Header";
-import Note_Warning from "./components/Note_Warning";
 import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
