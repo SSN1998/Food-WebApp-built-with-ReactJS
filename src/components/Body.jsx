@@ -5,7 +5,6 @@ import ShimmerUI from "./ShimmerUI";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
 import { FETCH_RESTAURANTS_URL } from "../utils/constants";
-// import resList from "../utils/mockdata";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -14,25 +13,23 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
-  
 
   useEffect(() => {
     fetchData();
   }, []);
 
-
   const fetchData = async () => {
-    const data = await fetch(
-     FETCH_RESTAURANTS_URL
-    );
+    const data = await fetch(FETCH_RESTAURANTS_URL);
     const json = await data.json();
+
     setListOfRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
     setFilteredRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
-
   };
 
   const onlineStatus = useOnlineStatus();
